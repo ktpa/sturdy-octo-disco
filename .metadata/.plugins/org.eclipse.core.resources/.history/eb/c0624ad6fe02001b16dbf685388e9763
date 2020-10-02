@@ -1,7 +1,0 @@
-package Characters;
-
-public class Weapon {
-	public Weapon(String type, int damage, boolean disarmable) {
-		
-	}
-}

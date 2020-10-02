@@ -1,8 +1,0 @@
-package Characters;
-
-public class Hero {
-	
-	public Hero() {
-		
-	}
-}

@@ -1,6 +1,0 @@
-package characters;
-
-public interface CharacterFunctionalities {
-	public damageCharacter();
-	
-}
