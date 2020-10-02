@@ -4,44 +4,43 @@ import characters.Character;
 
 public class Hero extends Character {
 	
-	private String name;
-	private int hitPoints;
-	private HeroClass heroClass;
-	private Weapon weapon;
-	
-	public Hero(String name, int hitPoints) {
-		this.name = name;
-		this.hitPoints = hitPoints;
-		this.heroClass = null;
-		this.weapon = new Weapon("Fists", 3, false);
+	public Hero(String name, int hitPoints, HeroClass heroClass, Weapon weapon) {
+		super(name, hitPoints, heroClass, weapon);
 	}
 
+	@Override
 	public String getName() {
-		return this.name;
+		return(super.getName());
 	}
 
+	@Override
 	public void setName(String name) {
-		this.name = name;
+		super.setName(name);
 	}
 
+	@Override
 	public int getHitPoints() {
-		return this.hitPoints;
+		return (super.getHitPoints());
 	}
 
+	@Override
 	public void setHitPoints(int hitPoints) {
-		this.hitPoints = hitPoints;
+		super.setHitPoints(hitPoints);
 	}
 	
-	public HeroClass getHeroClass() {
-		return this.heroClass;
+	@Override
+	public String getHeroClass() {
+		return (super.getHeroClass());
 	}
-
-	public Weapon getWeapon() {
-		return weapon;
+	
+	@Override
+	public String getWeapon() {
+		return (super.getWeapon());
 	}
-
+	
+	@Override
 	public void setWeapon(Weapon weapon) {
-		this.weapon = weapon;
+		super.setWeapon(weapon);
 	}
 	
 	

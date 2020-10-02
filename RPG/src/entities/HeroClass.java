@@ -12,4 +12,8 @@ public class HeroClass {
 		return this.heroClass;
 	}
 	
+	public String toString() {
+		return(this.heroClass);
+	}
+	
 }

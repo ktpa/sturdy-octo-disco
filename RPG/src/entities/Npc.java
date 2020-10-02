@@ -3,26 +3,43 @@ import characters.Character;
 
 public class Npc extends Character {
 	
-	private String[] greetings;
-	private String[] goodbyes;
-	private String type;
-	
-	public Npc(String[] greetings, String[] goodbyes, String type) {
-		this.greetings = greetings;
-		this.goodbyes = goodbyes;
-		this.type = type;
+	public Npc(String name, int hitPoints, HeroClass heroClass, Weapon weapon) {
+		super(name, hitPoints, heroClass, weapon);
 	}
 	
-	public String getGreeting() {
-		return(greetings[(int) (Math.random() * this.greetings.length)]);
+	@Override
+	public String getName() {
+		return(super.getName());
+	}
+
+	@Override
+	public void setName(String name) {
+		super.setName(name);
+	}
+
+	@Override
+	public int getHitPoints() {
+		return (super.getHitPoints());
+	}
+
+	@Override
+	public void setHitPoints(int hitPoints) {
+		super.setHitPoints(hitPoints);
 	}
 	
-	public String getGoodbyes() {
-		return(goodbyes[(int) (Math.random() * this.goodbyes.length)]);
+	@Override
+	public String getHeroClass() {
+		return (super.getHeroClass());
 	}
 	
-	public String getType() {
-		return(this.type);
+	@Override
+	public String getWeapon() {
+		return (super.getWeapon());
+	}
+	
+	@Override
+	public void setWeapon(Weapon weapon) {
+		super.setWeapon(weapon);
 	}
 	
 }

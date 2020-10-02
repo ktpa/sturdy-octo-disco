@@ -3,98 +3,63 @@ import entities.*;
 
 public class Character implements CharacterFunctionalities {
 
-	Hero hero = null;
-	Npc npc = null;
-	Enemy enemy = null;
-	Weapon weapon = null;
-	HeroClass heroClass = null;
-	String type;
+	private String name;
+	private int hitPoints;
+	private HeroClass heroClass;
+	private Weapon weapon;
 	
-	public Character() {
-		
-	}
+	public Character(String name, int hitPoints, HeroClass heroClass, Weapon weapon) {
+		this.name = name;
+		this.hitPoints = hitPoints;
+		this.heroClass = heroClass;
+		this.weapon = weapon;
+	}	
 	
-	public Character(Hero hero) {
-		this.type = "hero";
-		this.hero = hero;
-		
-	}
-	
-	public Character(Enemy enemy) {
-		this.enemy = enemy;
-		this.type = "enemy";
-	}
-	
-	public Character(Npc npc) {
-		this.npc = npc;
-		this.type = "npc";
-	}
-	
-	public Character getCharacter() {
-		if(this.hero != null) {
-			return((Character) this.hero);
-		} else if (this.enemy != null) {
-			return((Character) this.enemy);
-		} else {
-			return((Character) this.npc);
-		}
-		
-	}
-	
-	public int getHitPoints() {
-		if(this.type.equals("hero")) {
-			return(this.hero.getHitPoints());
-		} else if (this.type.equals("enemy")) {
-			return(this.enemy.getHitPoints());
-		} else {
-			return(this.npc.getHitPoints());
-		}
-	}
-	
-	public String getType() {
-		return this.type;
-	}
-	
-	public Hero getHero() {
-		return this.hero;
-	}
-	
-	public Enemy getEnemy() {
-		return this.enemy;
-	}
-	
-	public Npc getNpc() {
-		return this.npc;
-	}
-	
-	public String getName() {
-		if(this.hero != null) {
-			return(this.hero.getName());
-		} else if (this.enemy != null) {
-			return(this.enemy.getName());
-		} else {
-			return(this.npc.getName());
-		}
-	}
-	
-	
-
 	@Override
-	public void damageCharacter() {
+	public void damageCharacter(int amount) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
-	public void healCharacter() {
+	public void healCharacter(int amount) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void talkToCharacter() {
 		// TODO Auto-generated method stub
-		
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getHitPoints() {
+		return hitPoints;
+	}
+
+	public void setHitPoints(int hitPoints) {
+		this.hitPoints = hitPoints;
+	}
+
+	public String getHeroClass() {
+		return heroClass.toString();
+	}
+
+	public void setHeroClass(HeroClass heroClass) {
+		this.heroClass = heroClass;
+	}
+
+	public String getWeapon() {
+		return weapon.toString();
+	}
+
+	public void setWeapon(Weapon weapon) {
+		this.weapon = weapon;
 	}
 	
 }

@@ -13,6 +13,10 @@ public class Game {
 		// (SET RESOLUTION AND STUFF FOR SCREEN)
 	}
 	
+	public final String EOL() {
+		return("\n");
+	}
+	
 	public void initGame() {
 		
 		
@@ -24,11 +28,8 @@ public class Game {
 		// Functionality for inventory
 		// Functionality for economics
 		for (int i = 0; i < this.characters.size(); i++) {
-			System.out.println("Name: " + this.characters.get(i).getCharacter().getName() + ". "
-					+ "Character type: " + this.characters.get(i).getCharacter().getType() + ". "
-							+ "Hit points: " + this.characters.get(i).getCharacter().getHitPoints() + ".");
+			System.out.println("Name: " + this.characters.get(i).getName() + "." + EOL() + "Type: " + this.characters.get(i).getHeroClass() + "." + EOL() + "Hit points: " + this.characters.get(i).getHitPoints() + "." + EOL() + "Weapon: " + this.characters.get(i).getWeapon() + "." + EOL());
 		}
-		System.out.println(this.characters.size());
 		
 	}
 
@@ -37,19 +38,21 @@ public class Game {
 		String[] names = {"Karl", "Jens", "Henke", "Nils", "Richard", "Boye", "Leffe", "Mega", "Irina", "Porkala"};
 		int[] validHitPoints = {2, 4, 7, 9, 13, 16, 18, 21};
 		int heroes = (int) (Math.random() * 10);
-		int enemies = (int) (Math.random() * 50);
-		for(int i = 0; i < heroes; i++) {
-			characters.add(new Character(new Hero(
-											names[(int) (Math.random() * names.length)], 
-											validHitPoints[(int) (Math.random() * validHitPoints.length)])));
+		int enemies = (int) (Math.random() * 10);
+		for (int i = 0; i < heroes; i++) {
+			characters.add(new Hero(names[(int) (Math.random() * names.length)], 
+					validHitPoints[(int) (Math.random() * validHitPoints.length)],
+					new HeroClass("Hero"),
+					new Weapon("Fists", 3, false)));
 		}
-		for(int i = 0; i < enemies; i++) {
-			characters.add(new Character(new Enemy(
-											names[(int) (Math.random() * names.length)], 
-											validHitPoints[(int) (Math.random() * validHitPoints.length)])));
+		for (int i = 0; i < enemies; i++) {
+			characters.add(new Enemy(names[(int) (Math.random() * names.length)], 
+					validHitPoints[(int) (Math.random() * validHitPoints.length)],
+					new HeroClass("Enemy"),
+					new Weapon("Fists", 3, false)));
 		}
 		
-		System.out.println("Done testing characters, returning...");
+		System.out.println("Done creating characters, returning...");
 	}
 	
 }

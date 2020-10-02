@@ -10,4 +10,8 @@ public class Weapon {
 		this.damage = damage;
 		this.disarmable = disarmable;
 	}
+	
+	public String toString() {
+		return this.type;
+	}
 }
