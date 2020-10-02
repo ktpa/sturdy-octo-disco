@@ -1,0 +1,16 @@
+package Characters;
+
+public class Enemy {
+
+	
+	
+	private String name;
+	private int hitPoints;
+	
+	public Enemy(String name, int hitPoints) {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+}

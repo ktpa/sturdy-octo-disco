@@ -1,0 +1,6 @@
+package Game;
+import Characters.*
+
+public class Main {
+	
+}

@@ -1,0 +1,7 @@
+package entitites;
+
+public class Npc {
+	
+	private String[] greetings = ["Hello.", "How are you?", "Great to meet you.", "Welcome."];
+	
+}

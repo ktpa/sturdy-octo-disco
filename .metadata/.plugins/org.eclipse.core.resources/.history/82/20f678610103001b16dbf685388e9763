@@ -1,0 +1,19 @@
+package entitites;
+
+public class Npc {
+	
+	private String[] greetings = {"Hello.", "How are you?", "Great to meet you.", "Welcome."};
+	private String[] goodbyes;
+	private String type;
+	
+	public Npc(String[] greetings, String[] goodbyes, String type) {
+		this.greetings = greetings;
+		this.goodbyes = goodbyes;
+		this.type = type;
+	}
+	
+	public String getGreeting() {
+		return(greetings[(int) (Math.random() * this.greetings.length)]);
+	}
+	
+}

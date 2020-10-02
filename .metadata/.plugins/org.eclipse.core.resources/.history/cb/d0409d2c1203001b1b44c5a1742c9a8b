@@ -1,0 +1,68 @@
+package characters;
+import entities.*;
+
+public class Character implements CharacterFunctionalities {
+
+	Hero hero = null;
+	Npc npc = null;
+	Enemy enemy = null;
+	Weapon weapon = null;
+	HeroClass heroClass = null;
+	
+	public Character() {
+		
+	}
+	
+	public Character(Hero hero) {
+		this.hero = hero;
+	}
+	
+	public Character(Enemy enemy) {
+		this.enemy = enemy;
+	}
+	
+	public Character(Npc npc) {
+		this.npc = npc;
+	}
+	
+	public Character getCharacter() {
+		if(this.hero != null) {
+			this.getHero();
+		} else if (this.enemy != null) {
+			this.getEnemy();
+		} else {
+			this.getNpc();
+		}
+	}
+	
+	public Hero getHero() {
+		return this.hero;
+	}
+	
+	public Enemy getEnemy() {
+		return this.enemy;
+	}
+	
+	public Npc getNpc() {
+		return this.npc;
+	}
+
+	@Override
+	public void damageCharacter() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void healCharacter() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void talkToCharacter() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

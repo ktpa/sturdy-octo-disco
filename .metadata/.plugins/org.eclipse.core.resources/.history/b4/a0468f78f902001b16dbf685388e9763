@@ -1,0 +1,13 @@
+package Characters;
+
+public class Hero {
+	
+	private String name;
+	private int hitPoints;
+	
+	public Hero(String name, int hitPoints) {
+		this.name = name;
+		this.hitPoints = hitPoints;
+	}
+	
+}

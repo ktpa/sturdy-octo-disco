@@ -1,0 +1,5 @@
+package Characters;
+
+public interface CharacterFunctionalities {
+
+}

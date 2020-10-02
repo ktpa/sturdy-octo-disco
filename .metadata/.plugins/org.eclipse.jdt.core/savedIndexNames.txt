@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+/home/bravo/Arbeten/jprojects/.metadata/.plugins/org.eclipse.jdt.core
+3828224973.index
+1672506568.index

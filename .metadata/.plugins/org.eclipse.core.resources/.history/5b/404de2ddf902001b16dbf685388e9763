@@ -1,0 +1,15 @@
+package Characters;
+
+public class HeroClass {
+	
+	private String heroClass;
+	
+	public HeroClass(String heroClass) {
+		this.heroClass = heroClass;
+	}
+	
+	public void getHeroClass() {
+		return this.heroClass;
+	}
+	
+}

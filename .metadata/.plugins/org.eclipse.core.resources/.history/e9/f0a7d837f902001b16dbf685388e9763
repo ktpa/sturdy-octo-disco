@@ -1,0 +1,7 @@
+package default.package;
+
+public class Hero {
+	public Hero() {
+		
+	}
+}

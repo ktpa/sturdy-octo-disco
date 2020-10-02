@@ -1,0 +1,8 @@
+package Characters;
+
+public class Enemy {
+	
+	private name;
+	private hitPoints;
+	
+}
